@@ -127,6 +127,7 @@ export default function Calendar() {
       const loadData = response.data;
       setSchedules(loadData.rows);
     } catch (err) {
+      console.log(err);
       toast.error("서버와의 연결이 끊겼습니다.", { autoClose: 1500 });
     }
   }
